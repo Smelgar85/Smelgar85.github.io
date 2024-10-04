@@ -145,3 +145,58 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* Estilos para la lista de casos */
+.case-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; /* Ajusta el espacio entre los elementos */
+}
+
+.case-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas */
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.case-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.case-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.case-item h3 {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #1C1C2D; /* Color del texto */
+}
+
+.case-item p {
+    font-size: 1rem;
+    margin: 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    .case-item {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .case-item {
+        flex: 1 1 100%; /* Una columna */
+    }
+}
+
