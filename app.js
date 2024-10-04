@@ -77,7 +77,7 @@ function setLanguage(language) {
 
 // Inicializar el mapa de Google Maps
 function initMap() {
-    var despacho = { lat: 36.489, lng: -4.718 };
+    var despacho = { lat: 36.489393375262416, lng: -4.718904652777795 };
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: despacho
