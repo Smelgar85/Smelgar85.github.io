@@ -4,49 +4,59 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #F5F5DC; /* Beige claro */
+    background-color: #F5F5DC;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
 }
 
 body {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Contenedor general para centrar el contenido */
 .container {
-    max-width: 700px; /* Limita el ancho del contenido */
-    
-    margin: auto; /* Esto centra el contenido */
-    padding: 0 200px; /* Añade un poco de padding lateral */
+    max-width: 700px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 200px;
+    }
 }
 
 main {
-    flex: 1; /* Para que el contenido principal ocupe todo el espacio posible */
+    flex: 1;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #D3D3D3; /* Fondo claro para que el logo oscuro se vea */
+    background-color: #D3D3D3;
     color: black;
-    position: relative; /* Para que el selector de idioma esté dentro del header */
+    position: relative;
 }
 
 header img {
-    max-width: 700px;
+    max-width: 100%;
+    height: auto;
 }
 
 .language-selector {
-    position: fixed;
-    top: 7px;
+    position: absolute;
+    top: 20px;
     right: 20px;
-    z-index: 100
 }
 
 .language-selector button {
-    background-color: #bd7b4c; /* Marrón oscuro */
+    background-color: #bd7b4c;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -55,15 +65,12 @@ header img {
 }
 
 .language-selector button:hover {
-    background-color: #A0522D; /* Un tono marrón más claro */
+    background-color: #A0522D;
 }
 
 .navbar {
-    position: fixed; /* Esto hará que la barra se mantenga visible en todo momento */
-    top: 0;
     width: 100%;
-    z-index: 10; /* Asegura que esté siempre por encima del contenido */
-    background-color: #8B6E4E; /* Color de fondo de la barra */
+    background-color: #bd7b4c;
 }
 
 .navbar ul {
@@ -71,11 +78,11 @@ header img {
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .navbar ul li {
-    flex: 1;
+    width: 100%;
 }
 
 .navbar ul li a {
@@ -83,22 +90,27 @@ header img {
     padding: 14px;
     text-align: center;
     text-decoration: none;
-    color: #1C1C2D; /* Color del logo (oscuro) */
-    font-size: 18px;
-    transition: background-color 0.5s ease; /* Transición suave */
+    color: #1C1C2D;
+    font-size: 1rem;
+    transition: background-color 0.5s ease;
 }
 
 .navbar ul li a:hover {
-    background-color: #c98465; /* Marrón más claro al pasar el mouse */
+    background-color: #c98465;
 }
 
-/* Fade-in effect on hover for icons and links */
-.navbar ul li a {
-    transition: color 0.3s ease, background-color 0.3s ease; /* Suave fade-in para colores */
-}
+@media (min-width: 600px) {
+    .navbar ul {
+        flex-direction: row;
+    }
 
-.language-selector button {
-    transition: color 0.3s ease, background-color 0.3s ease; /* Suave fade-in para colores */
+    .navbar ul li {
+        width: auto;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+    }
 }
 
 .tabcontent {
@@ -106,19 +118,30 @@ header img {
     padding: 20px;
 }
 
-#Inicio { display: block; } /* Mostramos la sección de Inicio por defecto */
+#Inicio {
+    display: block;
+}
 
 #map {
+    width: 100%;
     height: 300px;
 }
 
-/* Footer */
+@media (max-width: 600px) {
+    #map {
+        height: 200px;
+    }
+}
+
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
     width: 100%;
-    position: relative;
-    bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
