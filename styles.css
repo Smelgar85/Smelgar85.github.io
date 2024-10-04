@@ -7,6 +7,13 @@ body {
     box-sizing: border-box;
 }
 
+/* Contenedor general para centrar el contenido */
+.container {
+    max-width: 1200px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Esto centra el contenido */
+    padding: 0 20px; /* Añade un poco de padding lateral */
+}
+
 header {
     text-align: center;
     padding: 20px;
@@ -63,10 +70,16 @@ header img {
     text-decoration: none;
     color: #1C1C2D; /* Color del logo (oscuro) */
     font-size: 18px;
+    transition: background-color 0.5s ease; /* Transición suave */
 }
 
 .navbar ul li a:hover {
     background-color: #A0522D; /* Marrón más claro al pasar el mouse */
+}
+
+/* Fade-in effect on hover for icons and links */
+.navbar ul li a {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Suave fade-in para colores */
 }
 
 .tabcontent {
@@ -85,4 +98,7 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
