@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC; /* Beige claro */
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #D3D3D3; /* Fondo claro para que el logo oscuro se vea */
+    color: black;
+    position: relative; /* Para que el selector de idioma esté dentro del header */
+}
+
+header img {
+    max-width: 300px;
+}
+
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-selector button {
+    background-color: #8B4513; /* Marrón oscuro */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.language-selector button:hover {
+    background-color: #A0522D; /* Un tono marrón más claro */
+}
+
+/* Barra de navegación (pestañas) */
+.navbar {
+    background-color: #8B6E4E; /* Beige oscuro para la barra de navegación */
+    overflow: hidden;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    flex: 1;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #1C1C2D; /* Color del logo (oscuro) */
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    background-color: #A0522D; /* Marrón más claro al pasar el mouse */
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+#Inicio { display: block; } /* Mostramos la sección de Inicio por defecto */
+
+#map {
+    height: 300px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
