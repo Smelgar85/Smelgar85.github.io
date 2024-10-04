@@ -23,6 +23,7 @@ body {
 }
 
 main {
+    margin-top: 80px;
     flex: 1; /* Para que el contenido principal ocupe todo el espacio posible */
 }
 
@@ -59,12 +60,15 @@ header img {
 }
 
 .navbar {
-    position: fixed; /* Esto hará que la barra se mantenga visible en todo momento */
+    position: fixed;  /* Fija la barra de navegación en la parte superior de la pantalla */
     top: 0;
-    width: 100%;
-    z-index: 10; /* Asegura que esté siempre por encima del contenido */
-    background-color: #8B6E4E; /* Color de fondo de la barra */
+    width: 100%;      /* Hace que ocupe todo el ancho */
+    z-index: 1000;    /* Asegura que esté por encima de otros elementos */
+    background-color: #8B6E4E; /* Color de fondo */
+    padding: 15px 0;  /* Añade algo de padding para que no esté muy pegado al borde */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Sombra para un efecto flotante */
 }
+
 
 .navbar ul {
     margin: 0;
