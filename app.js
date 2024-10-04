@@ -30,11 +30,16 @@ function setLanguage(language) {
     var menuMedios = document.getElementById('menu-medios');
     var menuContacto = document.getElementById('menu-contacto');
 
+    if (!menuInicio || !menuServicios || !menuMedios || !menuContacto) {
+        console.error("Error: No se encontraron los elementos del menú.");
+        return;
+    }
+
     if (language === 'es') {
-        elementsES.forEach(function(element) {
+        elementsES.forEach(function (element) {
             element.style.display = 'block';
         });
-        elementsEN.forEach(function(element) {
+        elementsEN.forEach(function (element) {
             element.style.display = 'none';
         });
 
@@ -45,10 +50,10 @@ function setLanguage(language) {
         menuContacto.innerText = 'Contacto';
 
     } else if (language === 'en') {
-        elementsES.forEach(function(element) {
+        elementsES.forEach(function (element) {
             element.style.display = 'none';
         });
-        elementsEN.forEach(function(element) {
+        elementsEN.forEach(function (element) {
             element.style.display = 'block';
         });
 
@@ -61,7 +66,7 @@ function setLanguage(language) {
 }
 
 // Inicializamos en español por defecto
-window.onload = function() {
+window.onload = function () {
     setLanguage('es');
 };
 
@@ -77,4 +82,3 @@ function initMap() {
         map: map
     });
 }
-
