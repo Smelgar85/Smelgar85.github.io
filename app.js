@@ -2,10 +2,10 @@
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 
-    // Ocultar todas las secciones
+    // Ocultar todas las secciones con la clase "tabcontent"
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+        tabcontent[i].style.display = "none";  
     }
 
     // Remover la clase "active" de todas las pestañas
@@ -14,10 +14,20 @@ function openTab(evt, tabName) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Mostrar la sección actual y agregar la clase "active" a la pestaña clickeada
+    // Mostrar la sección actual
     document.getElementById(tabName).style.display = "block";
+
+    // Añadir clase "active" a la pestaña seleccionada
     evt.currentTarget.className += " active";
 }
+
+// Inicializar la primera pestaña por defecto
+window.onload = function() {
+    document.getElementById('Inicio').style.display = 'block'; // Mostrar Inicio
+    document.getElementById('menu-inicio').className += ' active'; // Activar Inicio en el menú
+    setLanguage('es'); // Configurar el idioma predeterminado en español
+};
+
 
 // Función para cambiar entre idiomas
 function setLanguage(language) {
@@ -64,11 +74,6 @@ function setLanguage(language) {
         menuContacto.innerText = 'Contact';
     }
 }
-
-// Inicializamos en español por defecto
-window.onload = function () {
-    setLanguage('es');
-};
 
 // Inicializar el mapa de Google Maps
 function initMap() {
