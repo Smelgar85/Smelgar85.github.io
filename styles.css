@@ -1,17 +1,29 @@
 /* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background-color: #F5F5DC; /* Beige claro */
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
 }
 
 /* Contenedor general para centrar el contenido */
 .container {
     max-width: 1200px; /* Limita el ancho del contenido */
-    margin: 0 auto; /* Esto centra el contenido */
-    padding: 0 20px; /* Añade un poco de padding lateral */
+    
+    margin: auto; /* Esto centra el contenido */
+    padding: 0 200px; /* Añade un poco de padding lateral */
+}
+
+main {
+    flex: 1; /* Para que el contenido principal ocupe todo el espacio posible */
 }
 
 header {
@@ -23,7 +35,7 @@ header {
 }
 
 header img {
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .language-selector {
@@ -33,7 +45,7 @@ header img {
 }
 
 .language-selector button {
-    background-color: #8B4513; /* Marrón oscuro */
+    background-color: #bd7b4c; /* Marrón oscuro */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -47,7 +59,7 @@ header img {
 
 /* Barra de navegación (pestañas) */
 .navbar {
-    background-color: #8B6E4E; /* Beige oscuro para la barra de navegación */
+    background-color: #e69f6d; /* Beige oscuro para la barra de navegación */
     overflow: hidden;
 }
 
@@ -74,11 +86,15 @@ header img {
 }
 
 .navbar ul li a:hover {
-    background-color: #A0522D; /* Marrón más claro al pasar el mouse */
+    background-color: #c98465; /* Marrón más claro al pasar el mouse */
 }
 
 /* Fade-in effect on hover for icons and links */
 .navbar ul li a {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Suave fade-in para colores */
+}
+
+.language-selector button {
     transition: color 0.3s ease, background-color 0.3s ease; /* Suave fade-in para colores */
 }
 
@@ -93,12 +109,13 @@ header img {
     height: 300px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
+    width: 100%;
     position: relative;
     bottom: 0;
-    width: 100%;
 }
