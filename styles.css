@@ -16,7 +16,7 @@ body {
 
 /* Contenedor general para centrar el contenido */
 .container {
-    max-width: 1200px; /* Limita el ancho del contenido */
+    max-width: 900px; /* Limita el ancho del contenido */
     
     margin: auto; /* Esto centra el contenido */
     padding: 0 200px; /* Añade un poco de padding lateral */
@@ -35,13 +35,14 @@ header {
 }
 
 header img {
-    max-width: 500px;
+    max-width: 800px;
 }
 
 .language-selector {
     position: absolute;
-    top: 20px;
+    top: 7px;
     right: 20px;
+    z-index: 100
 }
 
 .language-selector button {
@@ -57,10 +58,12 @@ header img {
     background-color: #A0522D; /* Un tono marrón más claro */
 }
 
-/* Barra de navegación (pestañas) */
 .navbar {
-    background-color: #e69f6d; /* Beige oscuro para la barra de navegación */
-    overflow: hidden;
+    position: fixed; /* Esto hará que la barra se mantenga visible en todo momento */
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Asegura que esté siempre por encima del contenido */
+    background-color: #8B6E4E; /* Color de fondo de la barra */
 }
 
 .navbar ul {
