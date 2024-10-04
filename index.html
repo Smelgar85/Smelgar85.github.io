@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiménez Urbieta - Despacho de Abogados</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <!-- Header con el logo y selector de idioma -->
+    <header class="text-center">
+        <img src="logo-2.png" alt="Jiménez Urbieta" class="logo">
+        <div class="language-selector">
+            <button onclick="setLanguage('es')">ES</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- Barra de navegación con pestañas -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" id="menu-inicio" class="tablink" onclick="openTab(event, 'Inicio')">Inicio</a></li>
+            <li><a href="#" id="menu-servicios" class="tablink" onclick="openTab(event, 'Servicios')">Servicios</a></li>
+            <li><a href="#" id="menu-medios" class="tablink" onclick="openTab(event, 'Medios')">En los Medios</a></li>
+            <li><a href="#" id="menu-contacto" class="tablink" onclick="openTab(event, 'Contacto')">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="Inicio" class="tabcontent">
+        <div class="es">
+            <h2>Bienvenido a Jiménez Urbieta - Despacho Penalista de Excelencia</h2>
+            <p>En Jiménez Urbieta, nos dedicamos a ofrecer un servicio jurídico especializado en Derecho Penal, con un enfoque incomparable en la defensa de los derechos y libertades de nuestros clientes. Nuestra experiencia abarca una amplia gama de casos complejos y de alto perfil, desde delitos económicos hasta crímenes contra las personas, logrando resultados excepcionales en tribunales de todo el país.</p>
+            <p>Con una trayectoria intachable y un compromiso férreo con la justicia, nuestro despacho se ha consolidado como una referencia en la abogacía penal. Cada caso es único, y en Jiménez Urbieta, diseñamos estrategias personalizadas que garantizan la mejor defensa, sin importar la complejidad de la situación.</p>
+        </div>
+        <div class="en">
+            <h2>Welcome to Jiménez Urbieta - Criminal Law Firm of Excellence</h2>
+            <p>At Jiménez Urbieta, we are dedicated to providing specialized legal services in Criminal Law, with an unmatched focus on defending the rights and freedoms of our clients. Our experience covers a wide range of complex and high-profile cases, from economic crimes to crimes against individuals, achieving exceptional results in courts across the country.</p>
+            <p>With an impeccable track record and a firm commitment to justice, our firm has established itself as a reference in criminal advocacy. Each case is unique, and at Jiménez Urbieta, we design personalized strategies to guarantee the best defense, regardless of the complexity of the situation.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="Servicios" class="tabcontent">
+        <div class="es">
+            <h2>Nuestros Servicios Jurídicos en Derecho Penal</h2>
+            <p>En Jiménez Urbieta, ofrecemos una defensa integral en todas las ramas del Derecho Penal, con un equipo experto en resolver los desafíos legales más exigentes. Nuestro despacho se ha destacado por asumir y ganar casos de alta complejidad, representando tanto a particulares como a empresas, en:</p>
+            <ul>
+                <li><strong>Delitos económicos y contra la Hacienda Pública:</strong> Desde fraudes financieros hasta blanqueo de capitales, nuestras estrategias legales garantizan la defensa más exhaustiva.</li>
+                <li><strong>Delitos contra las personas y el patrimonio:</strong> Homicidios, lesiones, robos y cualquier acto delictivo que comprometa la integridad de nuestros clientes.</li>
+                <li><strong>Defensa en procedimientos penales complejos:</strong> Con amplia experiencia en juicios mediáticos, nuestro equipo asegura que cada detalle sea abordado con la máxima precisión y eficacia.</li>
+                <li><strong>Asesoría preventiva y defensa empresarial:</strong> Protegemos a nuestros clientes de las consecuencias legales que puedan derivarse de su actividad empresarial, velando por sus intereses en todo momento.</li>
+            </ul>
+            <p>Nuestra labor no se limita a la sala de juicio; Jiménez Urbieta se involucra desde el primer momento, trabajando mano a mano con nuestros clientes para preparar una defensa sólida y estratégica.</p>
+        </div>
+        <div class="en">
+            <h2>Our Criminal Law Services</h2>
+            <p>At Jiménez Urbieta, we provide comprehensive defense in all areas of Criminal Law, with a team of experts ready to tackle the most demanding legal challenges. Our firm has stood out by taking on and winning high-complexity cases, representing both individuals and companies in:</p>
+            <ul>
+                <li><strong>Economic crimes and offenses against the Public Treasury:</strong> From financial fraud to money laundering, our legal strategies ensure the most exhaustive defense.</li>
+                <li><strong>Crimes against individuals and property:</strong> Homicides, assaults, robberies, and any criminal acts that threaten our clients' integrity.</li>
+                <li><strong>Defense in complex criminal proceedings:</strong> With extensive experience in high-profile trials, our team ensures that every detail is handled with maximum precision and efficiency.</li>
+                <li><strong>Preventive advice and corporate defense:</strong> We protect our clients from the legal consequences of their business activities, safeguarding their interests at all times.</li>
+            </ul>
+            <p>Our work doesn’t stop at the courtroom; Jiménez Urbieta gets involved from the very beginning, working hand-in-hand with our clients to build a solid and strategic defense.</p>
+        </div>
+    </section>
+
+    <!-- Sección en los Medios -->
+    <section id="Medios" class="tabcontent">
+        <div class="es">
+            <h2>Jiménez Urbieta en los Medios</h2>
+            <p>A lo largo de los años, Jiménez Urbieta ha estado en el centro de numerosos casos que han acaparado la atención pública y mediática. Nuestra habilidad para gestionar situaciones críticas y de alta exposición nos ha permitido mantener un historial de éxito en algunos de los procesos judiciales más relevantes del país.</p>
+            <p>Entre los casos más destacados, hemos representado a clientes en:</p>
+            <ul>
+                <li><strong>El Caso XYZ:</strong> Una de las investigaciones más complejas en materia de fraude fiscal a nivel nacional, donde logramos una resolución favorable para nuestros defendidos.</li>
+                <li><strong>El juicio mediático del año:</strong> Donde defendimos a una figura pública acusada injustamente de graves delitos, alcanzando la absolución total.</li>
+                <li><strong>Operación Justicia:</strong> Un procedimiento penal de gran magnitud relacionado con la corrupción institucional, en el que fuimos la punta de lanza en la defensa de empresarios de primer nivel.</li>
+            </ul>
+            <p>Cada uno de estos casos ha sido un ejemplo del compromiso inquebrantable que tenemos con la justicia y la defensa de nuestros clientes. Los medios han reconocido nuestro trabajo como sinónimo de excelencia y profesionalidad en el campo del Derecho Penal.</p>
+        </div>
+        <div class="en">
+            <h2>Jiménez Urbieta in the Media</h2>
+            <p>Over the years, Jiménez Urbieta has been at the center of numerous cases that have attracted public and media attention. Our ability to manage critical and high-exposure situations has allowed us to maintain a track record of success in some of the country's most relevant judicial processes.</p>
+            <p>Among the most notable cases, we have represented clients in:</p>
+            <ul>
+                <li><strong>The XYZ Case:</strong> One of the most complex tax fraud investigations at the national level, where we achieved a favorable resolution for our clients.</li>
+                <li><strong>The trial of the year:</strong> Where we defended a public figure unjustly accused of serious crimes, securing a complete acquittal.</li>
+                <li><strong>Operation Justice:</strong> A large-scale criminal proceeding related to institutional corruption, where we spearheaded the defense of top-level businessmen.</li>
+            </ul>
+            <p>Each of these cases is a testament to our unwavering commitment to justice and the defense of our clients. The media has recognized our work as a synonym for excellence and professionalism in the
+                <p>media has recognized our work as a synonym for excellence and professionalism in the field of Criminal Law.</p>
+            </div>
+        </section>
+    
+        <!-- Sección de Contacto -->
+        <section id="Contacto" class="tabcontent">
+            <div class="es">
+                <h2>Contacto</h2>
+                <p><strong>Teléfono:</strong> 622 22 88 69</p>
+                <p><strong>Email:</strong> Rafael@Jimenez-Urbieta.com</p>
+                <p><strong>Dirección:</strong> Centro Comercial Calahonda, Local 29, Mijas-Costa.</p>
+                <p>Si necesita una defensa penal de calidad, con garantías de éxito y un equipo legal experimentado, no dude en ponerse en contacto con nosotros. En <strong>Jiménez Urbieta</strong>, su caso es nuestra prioridad.</p>
+            </div>
+            <div class="en">
+                <h2>Contact</h2>
+                <p><strong>Phone:</strong> 622 22 88 69</p>
+                <p><strong>Email:</strong> Rafael@Jimenez-Urbieta.com</p>
+                <p><strong>Address:</strong> Centro Comercial Calahonda, Local 29, Mijas-Costa.</p>
+                <p>If you need high-quality criminal defense, with guarantees of success and an experienced legal team, don’t hesitate to contact us. At <strong>Jiménez Urbieta</strong>, your case is our priority.</p>
+            </div>
+            <div id="map" style="height: 300px;"></div>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 Jiménez Urbieta. Todos los derechos reservados.</p>
+        </footer>
+    
+        <!-- API de Google Maps -->
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT00rFmeYf9szfswtB5AXfyArif3EiJXo&callback=initMap"></script>
+    </body>
+    </html>
+    
